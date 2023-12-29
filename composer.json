@@ -1,34 +1,28 @@
 {
-  "name":"hatslogic/schedulemanager",
-  "description":"This Magento 2 extension is used to schedule products/CMS pages to be activated in a specific date interval. It can also be used to release a product or a page from a particular date",
-  "require":{
-    "php": "~7.0.13||~7.1.0||~7.2.0",
-    "magento/framework": "~101.0.0||~102.0.0"
+  "name": "hatslogic/schedulemanager",
+  "description": "This Magento 2 extension is used to schedule products/CMS pages to be activated in a specific date interval. It can also be used to release a product or a page from a particular date",
+  "require": {
+      "magento/framework": ">100.0"
   },
-  "type":"magento2-module",
-  "version":"1.0.0",
-  "license":[
-    "OSL-3.0"
+  "type": "magento2-module",
+  "version": "1.0.9",
+  "license": [
+      "OSL-3.0"
   ],
   "authors": [
-    {
-        "name": "2Hatslogic",
-        "email": "info@2hatslogic.com",
-        "homepage": "https://www.2hatslogic.com",
-        "role": "Leader"
-    }
+      {
+          "name": "2Hatslogic",
+          "email": "info@2hatslogic.com",
+          "homepage": "https://www.2hatslogic.com",
+          "role": "Leader"
+      }
   ],
   "autoload": {
       "files": [
           "registration.php"
       ],
       "psr-4": {
-          "Hatslogic\\Referrer\\": ""
+          "Hatslogic\\Schedulemanager\\": ""
       }
-  },
-  "scripts":{
-    "pre-package-uninstall":"Hatslogic\\Schedulemanager\\Setup\\Uninstall::composerUninstall",
-    "post-package-uninstall":[
-    ]
   }
 }

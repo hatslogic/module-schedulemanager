@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author 2hatslogic
+ * @copyright Copyright (c) 2021 Hatslogic (https://www.2hatslogic.com)
+ * @package Hatslogic_Referrer
+ */
+ -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="cms_page" resource="checkout" engine="innodb" comment="CMS Page">
+        <column xsi:type="date" name="published_from" nullable="true" comment="Published From" />
+        <column xsi:type="date" name="published_to" nullable="true" comment="Published To" />
+    </table>
+</schema>

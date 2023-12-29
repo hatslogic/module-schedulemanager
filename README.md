@@ -5,7 +5,7 @@ Usage:
 
 Extension setup:
 	Step 1: ​ Copy the code to the following path
-		<M2 Root>/app/code/hatslogic/schedulemanager/
+		<M2 Root>/app/code/Hatslogic/Schedulemanager/
 
 	Step 2: To complete the installation, run below commands
 		php bin/magento module:enable hatslogic_schedulemanager 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Copyright © 2013-2017 Magento, Inc. All rights reserved.
+* See COPYING.txt for license details.
+*/
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="content">
+     <field name="published_from">
+       <argument name="data" xsi:type="array">
+           <item name="config" xsi:type="array">
+               <item name="label" xsi:type="string" translate="true">Published From</item>
+               <item name="formElement" xsi:type="string">date</item>
+               <item name="sortOrder" xsi:type="number">1</item>
+           </item>
+       </argument>
+   </field>  
+   <field name="published_to">
+       <argument name="data" xsi:type="array">
+           <item name="config" xsi:type="array">
+               <item name="label" xsi:type="string" translate="true">Published To</item>
+               <item name="formElement" xsi:type="string">date</item>
+               <item name="sortOrder" xsi:type="number">2</item>
+           </item>
+       </argument>
+   </field>
+</fieldset>
+</form>

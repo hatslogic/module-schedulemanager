@@ -8,6 +8,8 @@ class ObserverDeterminePagePublished implements ObserverInterface
 {
     protected $_responseFactory;
     protected $_url;
+    protected $_page;
+    
     public function __construct(
         \Magento\Framework\App\ResponseFactory $responseFactory,
         \Magento\Framework\UrlInterface $url,

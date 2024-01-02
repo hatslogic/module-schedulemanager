@@ -3,21 +3,12 @@
   "description": "This Magento 2 extension is used to schedule products/CMS pages to be activated in a specific date interval. It can also be used to release a product or a page from a particular date",
   "repositories": [
     {
-        "type": "package",
-        "package": {
-            "name": "hatslogic/module-schedulemanager",
-            "version": "1.0.9",
-            "type": "package",
-            "source": {
-                "url": "git@github.com:hatslogic/module-schedulemanager.git",
-                "type": "git",
-                "reference": "main"
-            }
-        }
+        "type": "vcs",
+        "url":  "https://github.com/hatslogic/module-schedulemanager.git"
     }
   ],
   "require": {
-    "hatslogic/module-schedulemanager": "*",
+      "hatslogic/module-schedulemanager": "dev-main",
       "magento/framework": ">100.0"
   },
   "type": "magento2-module",

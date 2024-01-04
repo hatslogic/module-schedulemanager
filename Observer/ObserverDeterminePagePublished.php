@@ -9,9 +9,9 @@ class ObserverDeterminePagePublished implements ObserverInterface
     protected $_responseFactory;
     protected $_url;
     protected $_page;
-    
+
     public function __construct(
-        \Magento\Framework\App\ResponseFactory $responseFactory,
+        \Magento\Framework\App\Response\Http $responseFactory,
         \Magento\Framework\UrlInterface $url,
         \Magento\Cms\Model\Page $page
     ) {
@@ -24,11 +24,14 @@ class ObserverDeterminePagePublished implements ObserverInterface
     {
         $publishedFrom = $this->_page->getPublishedFrom();
         $publishedTo = $this->_page->getPublishedTo();
+        
         $isPublished = $this->isPagePublished($publishedFrom, $publishedTo);
+        
         if (!$isPublished) {
+            
             $event = $observer->getEvent();
-            $customUrl = 'home';
-            $this->_responseFactory->create()->setRedirect($customUrl)->sendResponse(); 
+            $customUrl = '/';
+            $this->_responseFactory->setRedirect($customUrl);
         }
     }
 
@@ -38,8 +41,8 @@ class ObserverDeterminePagePublished implements ObserverInterface
     * @return boolean
     */
     public function isPagePublished($publishedFrom, $publishedTo)
-    {
-        if (($publishedFrom !== '' && $publishedFrom >= date('Y-m-d')) || ($publishedTo !== '' && $publishedTo <= date('Y-m-d'))) {
+    {   
+        if (($publishedFrom && $publishedFrom >= date('Y-m-d')) || ($publishedTo && $publishedTo <= date('Y-m-d'))) {
             return false;
         } else {
             return true;

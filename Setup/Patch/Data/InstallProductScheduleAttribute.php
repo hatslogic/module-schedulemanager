@@ -69,12 +69,12 @@ class InstallProductScheduleAttribute implements
                 'required'                => false,
                 'user_defined'            => false,
                 'default'                 => '',
-                'searchable'              => true,
-                'filterable'              => true,
+                'searchable'              => false,
+                'filterable'              => false,
                 'comparable'              => false,
                 'unique'                  => false,
                 'visible_on_front'        => false,
-                'used_in_product_listing' => true
+                'used_in_product_listing' => false
             ]
         );
 
@@ -94,12 +94,12 @@ class InstallProductScheduleAttribute implements
                 'required'                => false,
                 'user_defined'            => false,
                 'default'                 => '',
-                'searchable'              => true,
-                'filterable'              => true,
+                'searchable'              => false,
+                'filterable'              => false,
                 'comparable'              => false,
                 'unique'                  => false,
                 'visible_on_front'        => false,
-                'used_in_product_listing' => true
+                'used_in_product_listing' => false
             ]
         );
     }
